@@ -23,29 +23,34 @@ app.backgrounds = [
     }
 ];
 
+
 app.eventListeners = function() {
-    $("button").on("click", function(e) {
-        e.preventDefault();
-        let selection = $(this).text();
-        
-        for (let i = 0; i < app.backgrounds.length; i++) {
+    document.querySelectorAll("button").forEach((item) => {
+        item.addEventListener("click", function (e) {
+            e.preventDefault();
+            let selection = this.textContent;
+            for (let i = 0; i < app.backgrounds.length; i++) {
             const backgroundName = app.backgrounds[i].name;
             const backgroundSrc = app.backgrounds[i].src;
-    
+
             if (backgroundName === selection) {
-                $(".backgroundSelection").attr("src", backgroundSrc);
+                document.querySelector(".backgroundSelection").setAttribute("src", backgroundSrc);
             }
         }
+    });
+});
 
         
-    })
+        
+        
 
-}
+
+};
 
 app.init = function() {
     app.eventListeners();
 }
 // Initializing app once document is loaded
-$(function() {
+document.addEventListener("DOMContentLoaded", function() {
     app.init();
 });
