@@ -4,28 +4,70 @@
     margin: 0 auto;
 }
 
+// Fonts
+
+html {
+    font-size: 62.5%;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    font-size: 1.8rem;
+}
+
+h1 {
+    font-size: 6rem;
+    color: white;
+    font-style: oblique;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+// Header
+
 header {
-    height: 50vh;
-    background-color: lightblue;
+    height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../assets/bananas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    transform: skewY(-6deg);
+    width: 50%;
+    text-align: center;
+    border: 3px solid white;
+    padding: 20px;
+    background-color: cornflowerblue;
+}
+
+.backgroundHeading {
+    text-align: center;
+    padding: 25px 0;
 }
 
 .mainContent {
     display: flex;
-    margin-top: 100px;
+    padding-top: 50px;
 }
+
 
 
 .backgroundChoices {
     display: flex;
     flex-direction: column;
-    padding: 50px 0;
     flex-basis: 50%;
 
+    h3 {
+        padding-bottom: 20px;
+    }
+
     button {
-        width: 200px;
+        width: 220px;
+        margin: 10px 0;
     }
 }
 
