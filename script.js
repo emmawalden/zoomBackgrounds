@@ -12,15 +12,22 @@ app.backgrounds = [
         name: "Cats"
     },
     {
-        src: "./assets/doginhole.jpg",
-        alt: "white dog looking into a hole",
-        name: "Silence of the Lambs"
+        src: "./assets/clouds.jpg",
+        alt: "pink clouds with blue background",
+        name: "Clouds"
     },
     {
         src: "./assets/plant.jpg",
         alt: "plant branch with white background",
         name: "Plant"
+    },
+    {
+        src: "./assets/bananas.jpg",
+        alt: "yellow background with ripe bananas",
+        name: "Bananas"
     }
+
+
 ];
 
 

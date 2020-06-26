@@ -222,30 +222,48 @@ textarea {
 }
 
 .wrapper {
-  width: 80%;
+  width: 95%;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-html {
+html,
+button {
   font-size: 62.5%;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Fira Sans', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
 }
 
 body {
   font-size: 1.8rem;
 }
 
-h1 {
-  font-size: 6rem;
-  color: white;
-  font-style: oblique;
+button {
+  font-size: 2rem;
   text-transform: uppercase;
-  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 7rem;
+  font-style: oblique;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h1,
+button {
+  color: white;
 }
 
 header {
-  height: 70vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -265,14 +283,9 @@ h1 {
           transform: skewY(-6deg);
   width: 50%;
   text-align: center;
-  border: 3px solid white;
-  padding: 20px;
-  background-color: cornflowerblue;
-}
-
-.backgroundHeading {
-  text-align: center;
-  padding: 25px 0;
+  border: 4px solid white;
+  padding: 40px;
+  background-color: #7189ff;
 }
 
 .mainContent {
@@ -290,20 +303,26 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
 }
 
-.backgroundChoices h3 {
-  padding-bottom: 20px;
+.backgroundChoices h2 {
+  padding-bottom: 30px;
 }
 
 .backgroundChoices button {
-  width: 220px;
+  width: 250px;
   margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #7189ff;
+  border: 2px solid white;
 }
 
 .backgroundImages img {
-  width: 500px;
+  width: 700px;
   height: auto;
 }
