@@ -1,5 +1,5 @@
 .wrapper {
-    width: 95%;
+    width: 90%;
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -9,11 +9,10 @@
 html,
 button {
     font-size: 62.5%;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-h1, 
-h2 {
+h1 {
     font-family: 'Open Sans Condensed', sans-serif;
     text-transform: uppercase;
 }
@@ -23,23 +22,35 @@ body {
     font-size: 1.8rem;
 }
 
-button {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
 h1 {
     font-size: 7rem;
     font-style: oblique;
 }
 
+button {
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 2rem;
+}
+
+button,
 h2 {
-    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+h2,
+h3 {
+    font-size: 2.5rem;
 }
 
 h1,
-button {
+p,
+h3 {
     color: white;
+}
+
+p {
+    font-size: 1.6rem;
 }
 
 // Header
@@ -63,32 +74,59 @@ h1 {
     background-color: #7189ff;
 }
 
+// Main
+main {
+    background-color: #FDF7E3;
+}
+
+h2 {
+    padding-top: 50px;
+    color: #005148;
+    text-align: center;
+}
+
 .mainContent {
     display: flex;
-    padding-top: 50px;
+    padding: 75px 0;
 }
 
 .backgroundChoices {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 50%;
-
-    h2 {
-        padding-bottom: 30px;
-    }
 
     button {
         width: 250px;
         margin: 10px 0;
-        padding: 15px 20px;
-        border-radius: 5px;
-        background-color: #7189ff;
-        border: 2px solid white;
+        padding: 22px 50px;
+        border-radius: 8px;
+        background-color: #ffd31a;
+        border: 3px solid #7189ff;
+        color: #005148;
+
+    }
+
+    button:first-child {
+        margin-top: 0;
     }
 }
 
 .backgroundImages img {
-    width: 700px;
+    width: 850px;
     height: auto;
+    max-height: 550px;
+}
+
+footer {
+    background-color: #005148;
+}
+
+.bottomSection {
+    line-height: 3;
+    padding-top: 75px;
+}
+
+footer p {
+    padding: 20px 0;
+    text-align: right;
 }

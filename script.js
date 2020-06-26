@@ -7,9 +7,9 @@ const app = {};
 
 app.backgrounds = [
     {
-        src: "./assets/cats.jpg",
-        alt: "two stern looking cats",
-        name: "Cats"
+        src: "./assets/books.jpg",
+        alt: "bookshelf",
+        name: "Books"
     },
     {
         src: "./assets/clouds.jpg",
