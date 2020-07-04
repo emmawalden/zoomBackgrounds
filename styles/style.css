@@ -227,6 +227,10 @@ textarea {
   margin: 0 auto;
 }
 
+img {
+  max-width: 100%;
+}
+
 html,
 button {
   font-size: 62.5%;
@@ -249,8 +253,9 @@ h1 {
 
 button {
   font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 2rem;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  line-height: 15px;
 }
 
 button,
@@ -274,7 +279,7 @@ p {
 }
 
 header {
-  height: 100vh;
+  height: 90vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -284,9 +289,14 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url("../assets/bananas.jpg");
+  background-image: url("../assets/cloudHeader.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: bottom;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 h1 {
@@ -296,7 +306,6 @@ h1 {
   text-align: center;
   border: 4px solid white;
   padding: 40px;
-  background-color: #7189ff;
 }
 
 main {
@@ -305,7 +314,7 @@ main {
 
 h2 {
   padding-top: 50px;
-  color: #005148;
+  color: #43324d;
   text-align: center;
 }
 
@@ -320,25 +329,31 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 60%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 30px;
 }
 
 .backgroundChoices button {
-  width: 250px;
-  margin: 10px 0;
-  padding: 22px 50px;
-  border-radius: 8px;
-  background-color: #ffd31a;
-  border: 3px solid #7189ff;
-  color: #005148;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #28c7b5;
+  border: none;
+  color: white;
 }
 
 .backgroundChoices button:first-child {
   margin-top: 0;
+}
+
+.backgroundChoices button:hover,
+.backgroundChoices button:focus {
+  background-color: #96a7fc;
 }
 
 .backgroundImages img {
@@ -348,7 +363,7 @@ h2 {
 }
 
 footer {
-  background-color: #005148;
+  background-color: #43324d;
 }
 
 .bottomSection {

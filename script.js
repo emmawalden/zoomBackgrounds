@@ -1,6 +1,3 @@
-// Create an array of photos 
-// Have a series of buttons 
-// When button is clicked display that photo 
 
 // Empty object to namespace the app
 const app = {};
@@ -25,8 +22,12 @@ app.backgrounds = [
         src: "./assets/bananas.jpg",
         alt: "yellow background with ripe bananas",
         name: "Bananas"
+    },
+    {
+        src: "./assets/coffee.jpg",
+        alt: "coffee shop",
+        name: "Coffee Shop"
     }
-
 
 ];
 
@@ -47,6 +48,34 @@ app.eventListeners = function() {
     });
 });
 
+app.fetchPhoto = function() {
+    const surprise = document.querySelector(".randomImage");
+    surprise.addEventListener("click", function() {
+        fetch("https://api.pexels.com/v1/search?query=background", {
+            method: "GET",
+            total_results: 1,
+            headers: {
+                "Authorization":"563492ad6f9170000100000154738e2e43fd461fb2f2066460ae39b0",
+            } 
+        }).then(function(response) {
+            return response.json();
+        }).then((data) => {
+            const photos = data.photos;
+            console.log(data.photos);
+            photos.forEach(() => {
+                const index = Math.floor(Math.random() * photos.length);
+                const randomPhoto = photos[index].src.landscape;
+                document.querySelector(".backgroundSelection").setAttribute("src", randomPhoto);
+            });
+        }).catch(function(err){
+            if(err) {
+                document.querySelector(".backgroundSelection").setAttribute("src", "Try Again!");
+
+            }
+        });
+    });
+}
+
         
         
         
@@ -56,6 +85,7 @@ app.eventListeners = function() {
 
 app.init = function() {
     app.eventListeners();
+    app.fetchPhoto();
 }
 // Initializing app once document is loaded
 document.addEventListener("DOMContentLoaded", function() {
