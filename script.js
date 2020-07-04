@@ -4,29 +4,34 @@ const app = {};
 
 app.backgrounds = [
     {
-        src: "./assets/books.jpg",
+        src: "./assets/books.jpeg",
         alt: "bookshelf",
         name: "Books"
     },
     {
-        src: "./assets/clouds.jpg",
+        src: "./assets/clouds.jpeg",
         alt: "pink clouds with blue background",
         name: "Clouds"
     },
     {
-        src: "./assets/plant.jpg",
+        src: "./assets/plants.jpeg",
         alt: "plant branch with white background",
-        name: "Plant"
+        name: "Plants"
     },
     {
-        src: "./assets/bananas.jpg",
+        src: "./assets/bananas.jpeg",
         alt: "yellow background with ripe bananas",
         name: "Bananas"
     },
     {
-        src: "./assets/coffee.jpg",
+        src: "./assets/coffee.jpeg",
         alt: "coffee shop",
         name: "Coffee Shop"
+    },
+    {
+        src: "./assets/kitchen.jpeg",
+        alt: "kitchen",
+        name: "Kitchen" 
     }
 
 ];
@@ -61,7 +66,6 @@ app.fetchPhoto = function() {
             return response.json();
         }).then((data) => {
             const photos = data.photos;
-            console.log(data.photos);
             photos.forEach(() => {
                 const index = Math.floor(Math.random() * photos.length);
                 const randomPhoto = photos[index].src.landscape;

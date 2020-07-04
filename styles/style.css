@@ -342,7 +342,7 @@ h2 {
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-color: #28c7b5;
+  background-color: #e76f51;
   border: none;
   color: white;
 }
@@ -353,7 +353,7 @@ h2 {
 
 .backgroundChoices button:hover,
 .backgroundChoices button:focus {
-  background-color: #96a7fc;
+  background-color: #8a94c4;
 }
 
 .backgroundImages img {
