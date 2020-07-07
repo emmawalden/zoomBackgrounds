@@ -52,44 +52,41 @@ app.eventListeners = function() {
         }
     });
 });
+};
 
-app.fetchPhoto = function() {
+app.getPhotos = async function() {
+    let response = await fetch("https://api.pexels.com/v1/search?query=background", {
+        headers: {
+                "Authorization":"563492ad6f9170000100000154738e2e43fd461fb2f2066460ae39b0"
+        }
+    });
+    let data = await response.json()
+    return data;
+    
+
+};
+
+app.surprisePhotos = function() {
     const surprise = document.querySelector(".randomImage");
-    surprise.addEventListener("click", function() {
-        fetch("https://api.pexels.com/v1/search?query=background", {
-            method: "GET",
-            total_results: 1,
-            headers: {
-                "Authorization":"563492ad6f9170000100000154738e2e43fd461fb2f2066460ae39b0",
-            } 
-        }).then(function(response) {
-            return response.json();
-        }).then((data) => {
+    surprise.addEventListener("click", function () {
+        app.getPhotos().then(data => {
             const photos = data.photos;
             photos.forEach(() => {
                 const index = Math.floor(Math.random() * photos.length);
                 const randomPhoto = photos[index].src.landscape;
                 document.querySelector(".backgroundSelection").setAttribute("src", randomPhoto);
             });
-        }).catch(function(err){
-            if(err) {
-                document.querySelector(".backgroundSelection").setAttribute("src", "Try Again!");
-
-            }
+        }).catch(function (err) {
+            if (err) {
+                console.log("error");
+            };
         });
     });
-}
-
-        
-        
-        
-
-
 };
 
 app.init = function() {
     app.eventListeners();
-    app.fetchPhoto();
+    app.surprisePhotos();
 }
 // Initializing app once document is loaded
 document.addEventListener("DOMContentLoaded", function() {
